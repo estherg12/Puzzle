@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #E6E6FA;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 700px;
+    width: 80%;
+    min-width: 600px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #2c3e50;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #a0522d;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: steelblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4682b4;
+}
+
+#puzzle-container, #board {
+    display: grid;
+    grid-template-columns: repeat(8, 200px);
+    grid-template-rows: repeat(6, 150);
+    gap: 5px;
+    margin: 10px;
+}
+
+.puzzle-piece {
+    width: 200px;            
+    height: 150px;
+    background-size: 1600px 900px; 
+    cursor: grab;
+}
+
+.droppable {
+    width: 200px;
+    height: 150px;
+    border: 1px dashed #aaa;
+}
+
+/* Modal de imagen completa */
+#complete-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    background-color: white;
+    font-size: 40px;
+    border: 2px solid #333;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#full-image {
+    width: 80%;
+    height: auto;
+    background-image: url('n3.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 5px solid white;
+}
+
+#reset-button {
+    color: #090909;
+    padding: 1em 1.7em;
+    font-size: 30px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1.5px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+reset-button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  }
